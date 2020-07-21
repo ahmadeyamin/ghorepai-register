@@ -1,4 +1,4 @@
-<div>
+<div id="wire_box">
     <form id="email-form" name="email-form" action="#" data-name="Email Form" method="POST" class="reg_form_w" wire:submit.prevent="save">
         <div class="text-center">
             <label for="avatar" class="user_avatar">
@@ -87,7 +87,27 @@
                  @enderror
             </div>
         <div class="form_group">
-            <label for="address" class="input_label">Your current Address : <span class="req_star">*</span>
+            <label for="address" class="input_label">Mark Your Home Location From Map : <span class="req_star">*</span>
+            </label>
+            <input type="text"  class="text_input w-input" style="border: 1px solid red;cursor: pointer;" onfocus="modal.open()" maxlength="256" name="loc_by_google" data-name="loc_by_google" autocomplete="off" placeholder="Example Road Bhola" id="loc_by_google"  wire:model.lazy="loc_by_google" />
+            @error('loc_by_google')
+            <div class="invalid-feedback">
+                {{ $message }}
+            </div>
+            @enderror
+        </div>
+        <div class="form_group">
+            <label for="letlan" class="input_label">Your Lat Len : <span class="req_star">*</span>
+            </label>
+            <input type="text" class="text_input w-input" maxlength="256" name="letlan" data-name="letlan" autocomplete="off" placeholder="Bhola Bas Stand. __ " id="letlan"  wire:model.lazy="letlan" />
+            @error('letlan')
+            <div class="invalid-feedback">
+                {{ $message }}
+            </div>
+            @enderror
+        </div>
+        <div class="form_group ">
+            <label for="address" class="input_label"> Your current Address : <span class="req_star">*</span>
             </label>
             <input type="text" class="text_input w-input" maxlength="256" name="address" data-name="address" placeholder="Bhola Bas Stand. __ " id="address"  wire:model.lazy="address" />
             @error('address')
@@ -183,3 +203,11 @@
         <input type="submit" value="Submit" class="location_select_btn in_reg w-button" />
     </form>
 </div>
+
+
+@push('js')
+    <script>
+
+
+    </script>
+@endpush

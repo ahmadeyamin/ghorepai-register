@@ -28,6 +28,8 @@ class DeliveryHero extends Component
     public $checkox;
     public $nid_image_filtered ;
     public $nid_image ;
+    public $letlan;
+    public $loc_by_google;
 
     public function render()
     {
@@ -67,6 +69,8 @@ class DeliveryHero extends Component
             'bio' => 'required|max:400|min:50',
             'reference_by' => 'nullable|max:20|min:2',
             'checkox' => 'required',
+            'letlan' => 'required|json',
+            'loc_by_google' => 'required',
         ]);
 
         $avatar = $this->avatar->store('avatars');
@@ -81,11 +85,17 @@ class DeliveryHero extends Component
             'phone' => $this->phone,
             'nid' => $this->nid,
             'address' => $this->address,
+            'location' => $this->letlan,
             'father_name' => $this->father_name,
             'father_phone' => $this->father_phone,
             'reference_by' => $this->reference_by ?? null,
             'bio' => $this->bio,
-            'ip' =>  request()->ip(),
+            'login_ip' =>  request()->ip(),
+            'extra' => \json_encode(
+                [
+                    'google_location' => $this->loc_by_google,
+                ]
+            ),
         ]);
 
         session()->flash('success', 'Your Data successfully Saved.');

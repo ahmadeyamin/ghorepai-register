@@ -21,5 +21,5 @@ Auth::routes([
 ]);
 
 Route::group(['middleware' => ['auth']], function () {
-    Route::get('/home', 'BackendController@index')->name('home');
+    Route::get('/home', 'BackendController@index')->name('admin');
 });
