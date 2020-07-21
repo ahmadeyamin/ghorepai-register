@@ -96,7 +96,7 @@
             </div>
             @enderror
         </div>
-        <div class="form_group">
+        <div class="form_group d-none">
             <label for="letlan" class="input_label">Your Lat Len : <span class="req_star">*</span>
             </label>
             <input type="text" class="text_input w-input" maxlength="256" name="letlan" data-name="letlan" autocomplete="off" placeholder="Bhola Bas Stand. __ " id="letlan"  wire:model.lazy="letlan" />
