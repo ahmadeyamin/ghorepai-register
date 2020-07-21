@@ -134,7 +134,7 @@ heros_latLng = {
 
     function getaddressbyGoo(letlng){
         $.ajax({
-            url: `https://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyDRtcjNTHSPxoYkUJQOWWpAER6Ef-qXDUE&latlng=${letlng.lat()},${letlng.lng()}`,
+            url: `https://maps.googleapis.com/maps/api/geocode/json?key={{env('MAP_API')}}&latlng=${letlng.lat()},${letlng.lng()}`,
             })
             .done(function(response) {
                 window.livewire.find($("#wire_box").attr('wire:id')).set('loc_by_google', response.results[0].formatted_address)
