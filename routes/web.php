@@ -1,6 +1,17 @@
 <?php
 
+use App\User;
 use Illuminate\Support\Facades\Route;
+use App\Notifications\TestNotification;
+use Illuminate\Support\Facades\Notification;
+
+
+Route::get('/not', function () {
+    $user = User::find(1);
+    return Notification::route('Test','data')->notify(new TestNotification('Hello'));
+    // return Notification::route('OneSignal','data')->notify(new TestNotification('Data From Not User'));
+});
+
 
 Route::get('/', function () {
     return view('welcome');

@@ -30,4 +30,10 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'onesignal' => [
+        'app_id' => 'db5b773f-a717-426c-bfb6-f9038fe8eb28',
+        'rest_api_key' => 'MWQ1OThkNWEtMmYxZi00M2YxLTk5NmUtNDk0M2QxYjFjNjZi',
+        'user_auth_key' => 'YOUR-USER-AUTH-KEY'
+    ]
+
 ];

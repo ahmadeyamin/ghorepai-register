@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "56b99e776c8950743bd3a6fef75764f8",
+    "content-hash": "4cf2dbe302f27cbf9011f4ee1d776a27",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -57,6 +57,131 @@
                 "stack"
             ],
             "time": "2019-12-24T22:41:47+00:00"
+        },
+        {
+            "name": "berkayk/onesignal-laravel",
+            "version": "v1.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/berkayk/laravel-onesignal.git",
+                "reference": "3f15369055cbdbd1b46690152cb8af2c9d198222"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/berkayk/laravel-onesignal/zipball/3f15369055cbdbd1b46690152cb8af2c9d198222",
+                "reference": "3f15369055cbdbd1b46690152cb8af2c9d198222",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^6.2",
+                "illuminate/support": "4.*|5.*|6.*|7.*",
+                "php": ">=5.4.0",
+                "symfony/psr-http-message-bridge": "1.*|2.*"
+            },
+            "require-dev": {
+                "vlucas/phpdotenv": "^2.2"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Berkayk\\OneSignal\\OneSignalServiceProvider"
+                    ],
+                    "aliases": {
+                        "OneSignal": "Berkayk\\OneSignal\\OneSignalFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Berkayk\\OneSignal\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Berkay Kaya",
+                    "email": "berkayk@gmail.com",
+                    "homepage": "http://berkaykaya.com"
+                },
+                {
+                    "name": "Maykonn Welington Candido",
+                    "email": "maykonn@outlook.com"
+                }
+            ],
+            "description": "OneSignal Push Wrapper Laravel",
+            "keywords": [
+                "WebPush",
+                "laravel",
+                "laravel 5",
+                "onesignal",
+                "push"
+            ],
+            "time": "2020-04-01T15:17:55+00:00"
+        },
+        {
+            "name": "bitfumes/laravel-multiauth",
+            "version": "4.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bitfumes/laravel-multiauth.git",
+                "reference": "f59658bac72859c6591d125f1b4001bf89474459"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bitfumes/laravel-multiauth/zipball/f59658bac72859c6591d125f1b4001bf89474459",
+                "reference": "f59658bac72859c6591d125f1b4001bf89474459",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/ui": "^2.0"
+            },
+            "require-dev": {
+                "fzaninotto/faker": "^1.9",
+                "illuminate/support": "7.0",
+                "mockery/mockery": "^1.3.1",
+                "orchestra/database": "^5.0",
+                "orchestra/testbench": "^5.0",
+                "phpunit/phpunit": "^8.5"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Bitfumes\\Multiauth\\MultiauthServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Bitfumes\\Multiauth\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "sarthaksavvy",
+                    "email": "sarthak@bitfumes.com"
+                }
+            ],
+            "description": "Laravel Multiauth package",
+            "keywords": [
+                "Laravel multiauth",
+                "Multi Auth",
+                "admin auth",
+                "bitfumes",
+                "laravel acl",
+                "laravel permissions",
+                "laravel roles permissions",
+                "multiauth"
+            ],
+            "time": "2020-03-27T18:21:20+00:00"
         },
         {
             "name": "brick/math",
@@ -3448,6 +3573,70 @@
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
             "time": "2020-05-30T20:35:19+00:00"
+        },
+        {
+            "name": "symfony/psr-http-message-bridge",
+            "version": "v2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/psr-http-message-bridge.git",
+                "reference": "e44f249afab496b4e8c0f7461fb8140eaa4b24d2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/psr-http-message-bridge/zipball/e44f249afab496b4e8c0f7461fb8140eaa4b24d2",
+                "reference": "e44f249afab496b4e8c0f7461fb8140eaa4b24d2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1",
+                "psr/http-message": "^1.0",
+                "symfony/http-foundation": "^4.4 || ^5.0"
+            },
+            "require-dev": {
+                "nyholm/psr7": "^1.1",
+                "symfony/phpunit-bridge": "^4.4 || ^5.0"
+            },
+            "suggest": {
+                "nyholm/psr7": "For a super lightweight PSR-7/17 implementation"
+            },
+            "type": "symfony-bridge",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Bridge\\PsrHttpMessage\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                }
+            ],
+            "description": "PSR HTTP message bridge",
+            "homepage": "http://symfony.com",
+            "keywords": [
+                "http",
+                "http-message",
+                "psr-17",
+                "psr-7"
+            ],
+            "time": "2020-06-25T08:21:47+00:00"
         },
         {
             "name": "symfony/routing",
